@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm i",
+    "build": "npm i --output public",
     "dev": "nodemon index",
     "start": "node index"
   },
