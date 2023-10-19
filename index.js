@@ -23,11 +23,7 @@ app.get('/allUsers',(req,res)=>{
  db.query(`SELECT * FROM Users`,(err,result)=>{
         if(!err){
             console.log(result.rows)
-            fs.writeFile('1.txt',JSON.stringify(result.rows),'utf-8',(err)=>{
-                if(err){
-                    console.log(err);
-                }
-            })
+            res.send(result.rows)
 
         }else{
             console.log(err.message)

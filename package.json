@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm i",
+    "vercel-build": "node index.js",
     "dev": "nodemon index",
     "start": "node index"
   },
@@ -18,5 +19,8 @@
     "pg": "^8.11.3",
     "public": "^0.1.5",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.7"
   }
 }
