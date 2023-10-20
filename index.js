@@ -12,9 +12,7 @@ app.use(express.json())
 const db = new Pool({
     connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 })
-
 db.connect()
-
 app.get('/',(req,res)=>{
     res.send("Hello from Zeno")
     res.end()
@@ -30,7 +28,6 @@ app.get('/allUsers',(req,res)=>{
         }
     })
     res.end()
-
 })
 app.get('/allUser/:id',async(req,res)=>{
   await db.query(`SELECT * FROM Users WHERE id = ${req.params.id}`,(err,result)=>{
