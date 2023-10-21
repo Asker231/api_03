@@ -21,7 +21,7 @@ app.get('/allUsers',(req,res)=>{
  db.query(`SELECT * FROM Users`,(err,result)=>{
         if(!err){
             console.log(result.rows)
-
+            res.send("1")
             res.send(JSON.parse(result.rows))
 
         }else{
