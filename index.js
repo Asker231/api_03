@@ -22,7 +22,7 @@ app.get('/allUsers',(req,res)=>{
         if(!err){
             console.log(result.rows)
 
-            res.send(JSON.stringify(result.rows))
+            res.send(JSON.parse(result.rows))
 
         }else{
             console.log(err.message)
